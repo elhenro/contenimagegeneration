@@ -1,0 +1,14 @@
+{
+  "name": "ci-generator",
+  "version": "1.0.0",
+  "description": "generating content and hero images",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Henry Schober",
+  "license": "ISC",
+  "dependencies": {
+    "sharp": "^0.18.4"
+  }
+}
