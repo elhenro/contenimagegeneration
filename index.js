@@ -1,7 +1,11 @@
 import sharp from 'sharp';
 const fs = require('fs');
 const download = require('download');
- 
+
+import domtoimage from 'dom-to-image';
+
+var prompt = require('prompt');
+
 // npm download
 // npm dom-to-image
 
@@ -19,8 +23,22 @@ sharp('input.jpg')
   .catch( err => ... );
 
 
-// needed steps
+// needed steps - step by step
 // 
+// infos sammelns
+
+ prompt.get(['title','img-url','CTA'], function (err, result) {
+        // Log the results. 
+    console.log('Command-line input received:');
+    console.log('  Titel: ' + result.title);
+    console.log('  Downlaod Link: ' + result.img-url);
+    console.log('  CTA: ' + resut.CTA);
+  });
+
+// Start the prompt 
+   
+     prompt.start();
+
 // generate-content-images pexels.com/1234-image.jpg 'Der Winter ist kommen' der-winter.jpg
 //
 // 1. download content image from link and save it in workbench
@@ -28,7 +46,10 @@ download('http://unicorn.com/foo.jpg', 'dist').then(() => {
       console.log('done!');
 });
 // 1.1 umbenennen zu titel (der-winter.jpg)
+// --> fs
 // 3. filter/color correction (
+// --> sharp?
+// --> oder CSS, dom-to-image
 // 2. copy to hero_workbench
 // 2.2 rename to hero name (hero_der-winter.jpg)
 // 2.3 Dom-to-image render CTA with Title
