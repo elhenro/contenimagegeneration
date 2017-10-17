@@ -14,6 +14,7 @@ var prompt = require('prompt');
 //sharp(inputBuffer)
 //  .resize(999, 599)
 //  .toFile('output.webp', (err, info) => ... );
+/*
 
 sharp('input.jpg')
   //.rotate()
@@ -21,7 +22,7 @@ sharp('input.jpg')
   .toBuffer()
   .then( data => ... )
   .catch( err => ... );
-
+*/
 
 // needed steps - step by step
 // 
@@ -42,9 +43,12 @@ sharp('input.jpg')
 // generate-content-images pexels.com/1234-image.jpg 'Der Winter ist kommen' der-winter.jpg
 //
 // 1. download content image from link and save it in workbench
-download('http://unicorn.com/foo.jpg', 'dist').then(() => {
+//
+/*
+download ( img-url, 'dist').then(() => {
       console.log('done!');
 });
+*/
 // 1.1 umbenennen zu titel (der-winter.jpg)
 // --> fs
 // 3. filter/color correction (
